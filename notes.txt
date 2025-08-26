@@ -1,0 +1,39 @@
+<b> - Bold text
+<strong> - Important text
+    both do the same. strong is preferable for accessibility reasons 
+
+<i> - Italic text
+<em> - Emphasized text
+    both do the same. strong is preferable for accessibility reasons 
+
+<mark> - marcador de texto
+
+<small> - Smaller text
+
+<del> - strikethrough
+
+<ins> - sublinhado
+
+<sub> - Subscript text
+
+<sup> - Superscript text
+
+<blockquote>
+    citação recuada
+
+<q>
+    citação simplex com aspas
+
+<abbr>
+    abreviação. Adiciona um tooltip com a definição por extenso da sigla
+
+<address>
+    It adds some style for the address
+
+<cite>
+    defines the title of a creative work
+
+<bdo>
+    defines the text direction. requires the attribute dir with possible values
+        rtl (right to left)
+        ltr (left to right)
