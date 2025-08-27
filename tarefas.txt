@@ -1,3 +1,6 @@
 pesquisar sites de vendas de automóveis
 a ideia é replicar esses sites
 
+https://www.webmotors.com.br/
+https://www.kavak.com/br/seminovos
+https://seminovos.localiza.com/

@@ -1,0 +1,16 @@
+.page-width {
+    width: 75%;
+}
+
+h1 {
+    color: blue;
+}
+
+.text {
+    place-items: center;
+}
+
+.main-body {
+    background-color: antiquewhite;
+    place-items: center;
+}
