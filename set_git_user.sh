@@ -4,3 +4,4 @@
 
 git config --global user.email "tigoarrudawr@gmail.com"
 git config --global user.name "tigoarrudawr"
+git config --list | grep tigoarruda
