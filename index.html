@@ -1,80 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Car Store</title>
-        <link rel="stylesheet" href="css/test.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    </head>
-    <body class="main-body">
-        <div class="page-width,page-width">
-            <h1>My Car Store</h1>
-        </div>
-        <div class="page-width" >
-            <p>This is my Car Store: the store where I sell my cars.</p>
-            <p>Feel free to buy as many cars as you want. The more, the better.</p>
-            <p>Check some cars we have to sell:</p>
-        </div>
-        <div class="page-width">
-            <div class="card">
-                <img src="images/ford-ka-branco.jpg" alt="Ford Ka Branco" width="150" height="auto">
-                <p><b>Chevrolet | Tracker</b></p>
-                <p>1.8 Automático</p>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="texto">2025</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-gauge"></i>
-                        <span>345.098 KM</span>
-                    </div>
-                    <div>
-                        <button>More details</button> <!-- It is nesting divs. Check how to nest only some divs -->
-                        <button>Buy this</button>
-                    </div>
-                </div>                
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Concessionária - Encontre o Carro dos Seus Sonhos</title>
+    <link rel="stylesheet" href="css/index3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./script/index3.js"></script>
+    <script src="./data/marcas.js"></script>
+    <script src="./data/modelos.js"></script>
+
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Sua Concessionária</a>
             </div>
-            <div class="card">
-                <img src="images/ford-ka-branco.jpg" alt="Ford Ka Branco" width="150" height="auto">
-                <p><b>Chevrolet | Tracker</b></p>
-                <p>1.8 Automático</p>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="texto">2025</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-gauge"></i>
-                        <span>345.098 KM</span>
-                    </div>
-                    <div>
-                        <button>More details</button> <!-- It is nesting divs. Check how to nest only some divs -->
-                        <button>Buy this</button>
-                    </div>
-                </div>                
-            </div>
-            <div class="card">
-                <img src="images/ford-ka-branco.jpg" alt="Ford Ka Branco" width="150" height="auto">
-                <p><b>Chevrolet | Tracker</b></p>
-                <p>1.8 Automático</p>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span class="texto">2025</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-gauge"></i>
-                        <span>345.098 KM</span>
-                    </div>
-                    <div>
-                        <button>More details</button> <!-- It is nesting divs. Check how to nest only some divs -->
-                        <button>Buy this</button>
-                    </div>
-                </div>                
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Veículos Novos</a></li>
+                    <li><a href="#">Seminovos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-cta-header">
+                <i class="fa-brands fa-whatsapp"></i> Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <section class="hero" id="video-banner">
+        <video controls autoplay muted loop id="video-banner">
+            <source src="videos/car_banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container" id="content">
+            <div class="hero-content">
+                <h1>Encontre Seu Próximo Carro na Sua Concessionária</h1>
+                <p>A maior variedade de novos e seminovos com as melhores condições de financiamento.</p>
+                <!-- <a href="#" class="btn-cta-hero">Ver Todo o Estoque</a> -->
             </div>
         </div>
-    </body>
+    </section>
+
+    <section class="quick-search">
+        <div class="container">
+            <form action="#">
+                <select id="marca-select">
+                    <option value="" disabled selected></option>
+                </select>
+                <select id="modelo-select">
+                    <option value="" disabled selected>Selecione um modelo</option>
+                </select>
+                <select>
+                    <option value="">Tipo...</option>
+                    <option value="novo">Novo</option>
+                    <option value="seminovo">Seminovo</option>
+                </select>
+                <button type="submit">Buscar Veículos</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured-cars">
+        <div class="container">
+            <h2>Ofertas Especiais</h2>
+            <div class="car-grid">
+                <div class="car-card">
+                    <img src="https://via.placeholder.com/400x300?text=Carro+1" alt="Carro em destaque 1">
+                    <h3>Modelo do Carro</h3>
+                    <p class="car-price">R$ 85.000</p>
+                    <a href="#" class="btn-details">Ver Detalhes</a>
+                </div>
+                <div class="car-card">
+                    <img src="https://via.placeholder.com/400x300?text=Carro+2" alt="Carro em destaque 2">
+                    <h3>Modelo do Carro</h3>
+                    <p class="car-price">R$ 120.000</p>
+                    <a href="#" class="btn-details">Ver Detalhes</a>
+                </div>
+                <div class="car-card">
+                    <img src="https://via.placeholder.com/400x300?text=Carro+3" alt="Carro em destaque 3">
+                    <h3>Modelo do Carro</h3>
+                    <p class="car-price">R$ 65.000</p>
+                    <a href="#" class="btn-details">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Financiamento Fácil</h3>
+                    <p>Condições flexíveis para você realizar o sonho do carro novo.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Avalie seu Usado</h3>
+                    <p>Receba a melhor avaliação do seu veículo para troca.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Serviço de Oficina</h3>
+                    <p>Manutenção e reparo com profissionais especializados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <h4>Sua Concessionária</h4>
+                <p>Endereço: Rua dos Automóveis, 123 - Cidade, Estado</p>
+                <p>Telefone: (99) 99999-9999</p>
+                <p>Email: contato@suaconcessionaria.com.br</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
 </html>

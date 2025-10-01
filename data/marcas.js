@@ -1,0 +1,114 @@
+const montadoras = [
+    {
+        "value": "toyota",
+        "text": "Toyota"
+    },
+    {
+        "value": "volkswagen",
+        "text": "Volkswagen"
+    },
+    {
+        "value": "fiat",
+        "text": "Fiat"
+    },
+    {
+        "value": "chevrolet",
+        "text": "Chevrolet"
+    },
+    {
+        "value": "hyundai",
+        "text": "Hyundai"
+    },
+    {
+        "value": "ford",
+        "text": "Ford"
+    },
+    {
+        "value": "renault",
+        "text": "Renault"
+    },
+    {
+        "value": "nissan",
+        "text": "Nissan"
+    },
+    {
+        "value": "honda",
+        "text": "Honda"
+    },
+    {
+        "value": "kia",
+        "text": "Kia"
+    },
+    {
+        "value": "jeep",
+        "text": "Jeep"
+    },
+    {
+        "value": "byd",
+        "text": "BYD"
+    },
+    {
+        "value": "mercedesBenz",
+        "text": "Mercedes-Benz"
+    },
+    {
+        "value": "bmw",
+        "text": "BMW"
+    },
+    {
+        "value": "audi",
+        "text": "Audi"
+    },
+    {
+        "value": "porsche",
+        "text": "Porsche"
+    },
+    {
+        "value": "lexus",
+        "text": "Lexus"
+    },
+    {
+        "value": "volvo",
+        "text": "Volvo"
+    },
+    {
+        "value": "ferrari",
+        "text": "Ferrari"
+    },
+    {
+        "value": "lamborghini",
+        "text": "Lamborghini"
+    },
+    {
+        "value": "maserati",
+        "text": "Maserati"
+    },
+    {
+        "value": "astonMartin",
+        "text": "Aston Martin"
+    },
+    {
+        "value": "peugeot",
+        "text": "Peugeot"
+    },
+    {
+        "value": "citroen",
+        "text": "Citroën"
+    },
+    {
+        "value": "mitsubishi",
+        "text": "Mitsubishi"
+    },
+    {
+        "value": "subaru",
+        "text": "Subaru"
+    },
+    {
+        "value": "jacMotors",
+        "text": "Jac Motors"
+    },
+    {
+        "value": "chery",
+        "text": "Chery"
+    }
+]
