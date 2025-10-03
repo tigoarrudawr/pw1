@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker pull gvenzl/oracle-free
+
+docker run -d --name oracle-db -v oracle-volume:/opt/oracle/oradata -p 1521:1521 -e ORACLE_PASSWORD=YourSecurePassword -v oracle-volume:/opt/oracle/oradata gvenzl/oracle-free
+
+docker ps
+
+# docker logs -f oracle-db # save to a file
+
+# docker exec -it oracle-db sqlplus system/YourSecurePassword@FREEPDB1
+
