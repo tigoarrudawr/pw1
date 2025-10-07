@@ -184,8 +184,8 @@ h1, h2, h3 {
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
-    max-width: 400px; /* Optional: Use this to limit max image size */
-    max-height: 300px; /* Optional: Use this to limit max image size */
+    max-width: 100%; /* Optional: Use this to limit max image size */
+    max-height: 100%; /* Optional: Use this to limit max image size */
 }
 
 .car-card .image-wrapper {
