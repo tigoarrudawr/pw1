@@ -3,10 +3,14 @@ const loremIpsumSettings = {
 		min: 8,
 		max: 16
 	},
-	paragraph: {
+	phrases: {
 		min: 4,
 		max: 8
-	}
+	},
+	paragraph: {
+		min: 2,
+		max: 4
+	},
 }
 
 function preencherSelectMarcas() {
@@ -53,28 +57,46 @@ function preencherSelectModels() {
 }
 
 function loremIpsunGenerator() {
-	dictionary[Math.floor(Math.random() * dictionary.length)];
-	console.log(dictionary);
-	console.log(dictionary[Math.floor(Math.random() * dictionary.length)]);
-	const paragraphLength = Math.floor(Math.random() * (loremIpsumSettings.paragraph.max - loremIpsumSettings.paragraph.min + 1)) + loremIpsumSettings.paragraph.min;
-	var text = [];
-	for(var i = 0; i < paragraphLength; i++) {
-		const wordsLength = Math.floor(Math.random() * (loremIpsumSettings.words.max - loremIpsumSettings.words.min + 1)) + loremIpsumSettings.words.min;
-		var iParagraph = [];
-		for(var j = 0; j < wordsLength; j++) {
-			iParagraph.push(dictionary[Math.floor(Math.random() * dictionary.length)]);
+	const paragraphLenght = randomNumber(loremIpsumSettings.paragraph);
+	var paragraphList = [];
+	for (var i = 0; i < paragraphLenght; i++) {
+		const sentenceLength = randomNumber(loremIpsumSettings.phrases);
+		var sentenceList = [];
+		for (var j = 0; j < sentenceLength; j++) {
+			const wordsLength = randomNumber(loremIpsumSettings.words);
+			var wordList = [];
+			for (var k = 0; k < wordsLength; k++) {
+				var word = dictionary[Math.floor(Math.random() * dictionary.length)];
+				if (k == 0) {
+					word = word.charAt(0).toUpperCase() + word.slice(1);
+				} else if (k == wordsLength - 1) {
+					word += ".";
+				}
+				wordList.push(word);
+			}
+			sentenceList.push(wordList.join(" "));
 		}
-		text.push(iParagraph);
+		console.log("<p>" + sentenceList.join(" ") + "</p>");
+		paragraphList.push("<p class='about-us'>" + sentenceList.join(" ") + "</p>");
 	}
-	console.log(text);
-	text.forEach(paragraph => {
-		console.log(paragraph.join(" "));
-	});
+	console.log(paragraphList);
+	return paragraphList.join("\n");
 }
 
-function randomWord(dictionary) {
+function randomNumber(structure) {
+	return Math.floor(Math.random() * (structure.max - structure.min + 1)) + structure.min;
+}
 
+function loadAboutUs() {
+	const loremText = loremIpsunGenerator();
+	// 2. Find the element by its ID
+	const targetElement = document.getElementById('about-us');
+
+	// 3. Insert the string into the element
+	targetElement.innerHTML = loremText; 
 }
 
 document.addEventListener('DOMContentLoaded', preencherSelectMarcas);
 document.addEventListener('DOMContentLoaded', preencherSelectModels);
+document.addEventListener('DOMContentLoaded', loadAboutUs);
+
