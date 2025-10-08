@@ -7,3 +7,6 @@ https://seminovos.localiza.com/
 
 API de carros
 https://deividfortuna.github.io/fipe/v2/#tag/Fipe/operation/GetBrandsByType
+
+API Vault
+https://apivault.dev/categories/Development
