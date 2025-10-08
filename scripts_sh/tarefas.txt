@@ -4,3 +4,6 @@ a ideia é replicar esses sites
 https://www.webmotors.com.br/
 https://www.kavak.com/br/seminovos
 https://seminovos.localiza.com/
+
+API de carros
+https://deividfortuna.github.io/fipe/v2/#tag/Fipe/operation/GetBrandsByType
