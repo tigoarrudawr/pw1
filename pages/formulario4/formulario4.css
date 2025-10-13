@@ -1,0 +1,166 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Tahoma, sans-serif; /* Fonte similar ao visual clássico do Windows */
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.container-geral {
+    width: 750px; /* Largura base para o formulário */
+    border: 1px solid #777;
+    background-color: #e3e3e3; /* Cor de fundo da janela/formulário */
+    padding: 10px;
+}
+
+.fieldset-principal {
+    border: 1px solid #aaa;
+    padding: 15px;
+    background-color: #fff; /* Fundo branco dentro do fieldset */
+}
+
+.titulo-geral {
+    font-weight: bold;
+    padding: 0 5px;
+    font-size: 1em;
+    color: #000;
+}
+
+/* ------------------------------------------------------------------- */
+/* LAYOUT DE DUAS COLUNAS (Configurações + Checkboxes) */
+/* ------------------------------------------------------------------- */
+.secao-duas-colunas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.coluna-esquerda {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaço vertical entre as linhas de configuração */
+}
+
+.coluna-direita {
+    flex-basis: 40%;
+    padding-top: 5px; /* Alinha o topo com a primeira linha de configuração */
+}
+
+.campo-linha {
+    display: flex;
+    align-items: center;
+}
+
+.campo-linha label {
+    font-size: 0.9em;
+    margin-right: 5px;
+    white-space: nowrap;
+    text-align: right;
+    width: 165px; /* Garante que as labels da esquerda estejam alinhadas */
+}
+
+.campo-linha select, .campo-linha input[type="text"] {
+    border: 1px solid #777;
+    padding: 2px 4px;
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+/* Ajustes Específicos */
+.campo-linha select {
+    flex-grow: 0;
+}
+
+.input-pequeno {
+    width: 60px;
+}
+
+.input-titulo {
+    flex-grow: 1;
+}
+
+.com-explicacao {
+    gap: 5px;
+}
+
+.explicacao {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.com-asterisco label:first-child::after {
+    content: " ";
+    color: red;
+}
+
+.label-privado {
+    font-size: 0.9em;
+    margin-left: 15px !important;
+    width: auto !important; /* Sobrescreve a largura fixa para caber ao lado do select */
+    text-align: left !important;
+}
+
+/* Checkboxes da Coluna Direita */
+.grupo-checkboxes label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+.grupo-checkboxes input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* ------------------------------------------------------------------- */
+/* SEÇÃO TEXTAREAS (Código) */
+/* ------------------------------------------------------------------- */
+.secao-textareas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-textarea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-textarea label {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+
+.campo-textarea textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #777;
+    padding: 5px;
+    resize: vertical; /* Permite redimensionamento vertical */
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* Ícone de Livro (usando CSS simples, pode ser substituído por um ícone real) */
+.icone-livro {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #777;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Simula o ícone de livro (usando um caractere simples) */
+.icone-livro::before {
+    content: "\270D"; /* Símbolo de lápis/caneta (para simular a caneta no livro) */
+}

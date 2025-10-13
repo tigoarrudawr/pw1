@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Configuração Geral</title>
+    <link rel="stylesheet" href="formulario4.css">
+</head>
+<body>
+
+<div class="container-geral">
+    <fieldset class="fieldset-principal">
+        <legend class="titulo-geral">Geral</legend>
+
+        <form class="form-configuracao">
+
+            <div class="secao-duas-colunas">
+
+                <div class="coluna-esquerda">
+                    
+                    <div class="campo-linha titulo-form">
+                        <label for="destino">Destino :</label>
+                        <select id="destino" name="destino">
+                            <option>Chamado</option>
+                            <option>Email</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-linha com-asterisco">
+                        <label for="classificacao">Classificação do anexo * :</label>
+                        <select id="classificacao" name="classificacao">
+                            <option>Documento de análise</option>
+                            <option>Relatório</option>
+                        </select>
+                        <label class="label-privado">
+                            <input type="checkbox" id="privado" name="privado">
+                            Privado
+                        </label>
+                    </div>
+
+                    <div class="campo-linha titulo-form">
+                        <label for="posicaoVertical">Posição vertical :</label>
+                        <select id="posicaoVertical" name="posicaoVertical">
+                            <option>Centro</option>
+                            <option>Topo</option>
+                            <option>Base</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo-linha titulo-form">
+                        <label for="posicaoHorizontal">Posição horizontal :</label>
+                        <select id="posicaoHorizontal" name="posicaoHorizontal">
+                            <option>Centro</option>
+                            <option>Esquerda</option>
+                            <option>Direita</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-linha titulo-form">
+                        <label for="largura">Largura :</label>
+                        <input type="text" id="largura" name="largura" class="input-pequeno">
+                        <span class="explicacao">(Ex: 100, 110px, 90%)</span>
+                    </div>
+
+                    <div class="campo-linha titulo-form">
+                        <label for="altura">Altura :</label>
+                        <input type="text" id="altura" name="altura" class="input-pequeno">
+                        <span class="explicacao">(Ex: 100, 110px, 90%)</span>
+                    </div>
+                    
+                    <div class="campo-linha titulo-form">
+                        <label for="tituloForm">Título :</label>
+                        <input type="text" id="tituloForm" name="tituloForm" class="input-titulo" value="">
+                    </div>
+
+                </div>
+
+                <div class="coluna-direita">
+                    <div class="grupo-checkboxes">
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Barra de ferramentas (toolbar)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Barra de endereços (location)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Botões extras (directories)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Barra de status (status)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Barra de menus (menubar)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="opcoes[]">
+                            Histórico (copyhistory)
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="secao-textareas">
+                
+                <div class="campo-textarea">
+                    <label for="htmlHeader">HTML Header :</label>
+                    <textarea id="htmlHeader" name="htmlHeader" rows="5"></textarea>
+                    <span class="icone-livro"></span>
+                </div>
+
+                <div class="campo-textarea">
+                    <label for="cssCode">CSS :</label>
+                    <textarea id="cssCode" name="cssCode" rows="5"></textarea>
+                    <span class="icone-livro"></span>
+                </div>
+
+                <div class="campo-textarea">
+                    <label for="htmlBody">HTML Body (rodapé) :</label>
+                    <textarea id="htmlBody" name="htmlBody" rows="5"></textarea>
+                    <span class="icone-livro"></span>
+                </div>
+
+            </div>
+
+        </form>
+    </fieldset>
+</div>
+
+</body>
+</html>
