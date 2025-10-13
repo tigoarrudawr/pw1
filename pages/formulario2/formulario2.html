@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pré-Matrícula</title>
+    <link rel="stylesheet" href="formulario2.css">
+    <script src="formulario2.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="cabecalho-form">
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+    </div>
+
+    <form class="form-matricula">
+        
+        <fieldset class="secao">
+            <legend>Dados Pessoais</legend>
+            <div class="campos-pessoais">
+
+                <div class="campo-linha">
+                    <label for="nomeAluno" class="label-padrao-text">Nome do Aluno:</label>
+                    <input type="text" id="nomeAluno" name="nomeAluno" class="input-padrao">
+                </div>
+
+                <div class="campo-linha">
+                    <label for="nascimento" class="label-padrao-text">Nascimento (dd/mm/aaaa):</label>
+                    <div class="grupo-nascimento">
+                        <input type="text" id="nasc_dia" name="nasc_dia" class="input-data" maxlength="2"> /
+                        <input type="text" id="nasc_mes" name="nasc_mes" class="input-data" maxlength="2"> /
+                        <input type="text" id="nasc_ano" name="nasc_ano" class="input-data" maxlength="4">
+                    </div>
+                </div>
+
+                <div class="campo-linha">
+                    <label for="nomeMae" class="label-padrao-text">Nome da Mãe:</label>
+                    <input type="text" id="nomeMae" name="nomeMae" class="input-padrao">
+                </div>
+
+                <div class="campo-linha">
+                    <label for="nomePai" class="label-padrao-text">Nome do Pai:</label>
+                    <input type="text" id="nomePai" name="nomePai" class="input-padrao">
+                </div>
+                
+                <div class="campo-linha">
+                    <label for="telefone" class="label-padrao-text">Telefone:</label>
+                    <div class="grupo-telefone">
+                        DDD (
+                        <input type="text" id="tel_ddd" name="tel_ddd" class="input-ddd" maxlength="2"> )
+                        Tel
+                        <input type="text" id="tel_numero" name="tel_numero" class="input-tel" maxlength="9">
+                        Ramal
+                        <input type="text" id="tel_ramal" name="tel_ramal" class="input-ramal" maxlength="4">
+                    </div>
+                </div>
+
+                <div class="campo-linha">
+                    <label for="email" class="label-padrao-text">E-mail:</label>
+                    <input type="email" id="email" name="email" class="input-padrao">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="secao">
+            <legend>Informações de Matrícula</legend>
+            <div class="campos-matricula">
+                
+                <div class="coluna-matricula coluna-serie">
+                    <label for="serie" class="label-padrao-not-text">Série:</label>
+                    <select id="serie" name="serie" class="select-serie">
+                        <option value="pre-escolar">pré-escolar</option>
+                        <option value="fundamental1">fundamental 1</option>
+                        <option value="fundamental2">fundamental 2</option>
+                    </select>
+                </div>
+
+                <div class="coluna-matricula coluna-turno">
+                    <label class="label-padrao-not-text">Turno:</label>
+                    <div class="opcoes-radio">
+                        <div class="opcao">
+                            <input type="radio" id="manha" name="turno" value="manha">
+                            <label for="manha">Manhã</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="radio" id="tarde" name="turno" value="tarde">
+                            <label for="tarde">Tarde</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coluna-matricula coluna-atividades">
+                    <label class="label-padrao-not-text">Atividades Extracurriculares:</label>
+                    <div class="opcoes-checkbox">
+                        <div class="opcao">
+                            <input type="checkbox" id="informatica" name="atividade[]" value="informatica">
+                            <label for="informatica">Informática</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="checkbox" id="musica" name="atividade[]" value="musica">
+                            <label for="musica">Música</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="checkbox" id="balet" name="atividade[]" value="balet">
+                            <label for="balet">Balet</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="checkbox" id="pintura" name="atividade[]" value="pintura">
+                            <label for="pintura">Pintura</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="checkbox" id="judo" name="atividade[]" value="judo">
+                            <label for="judo">Judô</label>
+                        </div>
+                        <div class="opcao">
+                            <input type="checkbox" id="futebol" name="atividade[]" value="futebol">
+                            <label for="futebol">Futebol</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="botoes">
+            <button type="submit">Envia Formulário</button>
+            <button type="reset">Limpa Campos</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

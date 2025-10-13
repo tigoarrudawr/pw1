@@ -1,0 +1,199 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    background-color: #f7f7f7;
+    border: 1px solid #999;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cabecalho-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cabecalho-form h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cabecalho-form h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+/* Estilo do Fieldset */
+.secao {
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Layout dos campos */
+.campos-pessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-linha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label-padrao-text {
+    flex-basis: 173px;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.label-padrao-not-text {
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.input-padrao {
+    flex-grow: 1;
+    /* Ocupa o restante do espaço */
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+/* Grupos de inputs (Data e Telefone) */
+.grupo-nascimento,
+.grupo-telefone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-data {
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+.input-data:last-child {
+    width: 50px;
+    /* Campo do ano */
+}
+
+.input-ddd {
+    width: 25px;
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    text-align: center;
+}
+
+.input-tel {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    text-align: center;
+}
+
+.input-ramal {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Seção de Matrícula (layout em 3 colunas) */
+.campos-matricula {
+    display: flex;
+    gap: 30px;
+}
+
+.coluna-matricula {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-serie {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.select-serie {
+    padding: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+.coluna-turno {
+    flex-basis: 20%;
+}
+
+.opcoes-radio {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.coluna-atividades {
+    flex-basis: 50%;
+}
+
+.opcoes-checkbox {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.opcoes-radio .opcao,
+.opcoes-checkbox .opcao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Botões */
+.botoes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botoes button {
+    padding: 8px 20px;
+    font-size: 1em;
+    border: 1px solid #555;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin: 0 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.botoes button:hover {
+    background-color: #d0d0d0;
+}
