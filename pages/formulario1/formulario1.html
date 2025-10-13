@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário de Cadastro</title>
+	<script src="formulario1.js"></script>
+	<link rel="stylesheet" href="formulario1.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="header">
+		<div class="titulo">CADASTRE-SE</div>
+		<div class="acoes">
+			<button class="botao-acao curtir">
+				<span class="material-icons">thumb_up</span> Curtir 26
+			</button>
+			<button class="botao-acao compartilhar">
+				<span class="material-icons">share</span> Compartilhar
+			</button>
+		</div>
+	</div>
+
+	<form class="cadastro-form">
+
+		<fieldset class="secao">
+			<legend>Dados de Login</legend>
+
+			<div class="campos-login">
+				<div class="campo-grupo floating-label-group cpf-campo">
+					<input type="text" id="cpf" name="cpf" class="floating-input" maxlength="14" placeholder=" "
+						data-label-text="CPF">
+					<label for="cpf" class="floating-label">CPF</label>
+					<span class="info-formato">Formato: xxx.xxx.xxx-xx</span>
+					<span class="icone-erro material-icons">close</span>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="email" id="email" name="email" class="floating-input" placeholder=" "
+						data-label-text="E-mail">
+					<label for="email" class="floating-label">E-mail</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="email" id="confirmar_email" name="confirmar_email" class="floating-input"
+						placeholder=" " data-label-text="Confirmar">
+					<label for="confirmar_email" class="floating-label">Confirmar</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group senha-campo valido">
+					<input type="password" id="senha" name="senha" class="floating-input" placeholder=" "
+						data-label-text="Senha">
+					<label for="senha" class="floating-label">Senha</label>
+					<span class="icone-check material-icons">check</span>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="password" id="confirmar_senha" name="confirmar_senha" class="floating-input"
+						placeholder=" " data-label-text="Confirmar">
+					<label for="confirmar_senha" class="floating-label">Confirmar</label>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset class="secao">
+			<legend>Dados de Contato</legend>
+
+			<div class="campos-contato">
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="nome" name="nome" class="floating-input" placeholder=" "
+						data-label-text="Nome">
+					<label for="nome" class="floating-label">Nome</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="sobrenome" name="sobrenome" class="floating-input" placeholder=" "
+						data-label-text="Sobrenome">
+					<label for="sobrenome" class="floating-label">Sobrenome</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group nascimento-campo">
+					<input type="text" id="nascimento" name="nascimento" class="floating-input" maxlength="10"
+						placeholder=" " data-label-text="Nascimento">
+					<label for="nascimento" class="floating-label">Nascimento</label>
+					<span class="info-formato">Formato: xx/xx/xxxx</span>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="rg" name="rg" class="floating-input" placeholder=" " data-label-text="RG">
+					<label for="rg" class="floating-label">RG</label>
+				</div>
+
+				<div class="campo-grupo select-grupo">
+					<label for="sexo" class="label-select">Sexo</label>
+					<select id="sexo" name="sexo" class="select-personalizado">
+						<option value="" disabled selected>Selecione</option>
+						<option value="M">Masculino</option>
+						<option value="F">Feminino</option>
+						<option value="O">Outro</option>
+					</select>
+				</div>
+
+				<div class="campo-grupo cep-group">
+					<div class="cep-input-com-busca">
+						<div class="floating-label-group cep-campo">
+							<input type="text" id="cep" name="cep" class="floating-input" maxlength="9" placeholder=" "
+								data-label-text="CEP">
+							<label for="cep" class="floating-label">CEP</label>
+						</div>
+						<button type="button" class="botao-busca"><span class="material-icons">search</span></button>
+					</div>
+				</div>
+
+				<div class="campo-grupo floating-label-group endereco-campo">
+					<input type="text" id="endereco" name="endereco" class="floating-input" placeholder=" "
+						data-label-text="Endereço">
+					<label for="endereco" class="floating-label">Endereço</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group numero-campo">
+					<input type="text" id="numero" name="numero" class="floating-input" placeholder=" "
+						data-label-text="Nº">
+					<label for="numero" class="floating-label">Nº</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="bairro" name="bairro" class="floating-input" placeholder=" "
+						data-label-text="Bairro">
+					<label for="bairro" class="floating-label">Bairro</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="complemento" name="complemento" class="floating-input" placeholder=" "
+						data-label-text="Complemento">
+					<label for="complemento" class="floating-label">Complemento</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="text" id="cidade" name="cidade" class="floating-input" placeholder=" "
+						data-label-text="Cidade">
+					<label for="cidade" class="floating-label">Cidade</label>
+				</div>
+
+				<div class="campo-grupo select-grupo">
+					<label for="estado" class="label-select">Estado</label>
+					<select id="estado" name="estado" class="select-personalizado">
+						<option value="" disabled selected>Selecione</option>
+						<option value="SP">São Paulo</option>
+						<option value="RJ">Rio de Janeiro</option>
+					</select>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="tel" id="telefone" name="telefone" class="floating-input" placeholder=" "
+						data-label-text="DDD+Telefone">
+					<label for="telefone" class="floating-label">DDD+Telefone</label>
+				</div>
+
+				<div class="campo-grupo floating-label-group">
+					<input type="tel" id="celular" name="celular" class="floating-input" placeholder=" "
+						data-label-text="DDD+Celular">
+					<label for="celular" class="floating-label">DDD+Celular</label>
+				</div>
+
+			</div>
+		</fieldset>
+
+	</form>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
