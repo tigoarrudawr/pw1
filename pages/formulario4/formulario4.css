@@ -1,6 +1,6 @@
 body {
     background-color: #f0f0f0;
-    font-family: Tahoma, sans-serif; /* Fonte similar ao visual clássico do Windows */
+    font-family: Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -8,16 +8,16 @@ body {
 }
 
 .container-geral {
-    width: 750px; /* Largura base para o formulário */
+    width: 750px;
     border: 1px solid #777;
-    background-color: #e3e3e3; /* Cor de fundo da janela/formulário */
+    background-color: #e3e3e3;
     padding: 10px;
 }
 
 .fieldset-principal {
     border: 1px solid #aaa;
     padding: 15px;
-    background-color: #fff; /* Fundo branco dentro do fieldset */
+    background-color: #fff;
 }
 
 .titulo-geral {
@@ -27,9 +27,6 @@ body {
     color: #000;
 }
 
-/* ------------------------------------------------------------------- */
-/* LAYOUT DE DUAS COLUNAS (Configurações + Checkboxes) */
-/* ------------------------------------------------------------------- */
 .secao-duas-colunas {
     display: flex;
     justify-content: space-between;
@@ -41,17 +38,18 @@ body {
     flex-basis: 60%;
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Espaço vertical entre as linhas de configuração */
+    gap: 5px;
 }
 
 .coluna-direita {
     flex-basis: 40%;
-    padding-top: 5px; /* Alinha o topo com a primeira linha de configuração */
+    padding-top: 5px;
 }
 
 .campo-linha {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .campo-linha label {
@@ -59,17 +57,17 @@ body {
     margin-right: 5px;
     white-space: nowrap;
     text-align: right;
-    width: 165px; /* Garante que as labels da esquerda estejam alinhadas */
+    width: 165px;
 }
 
-.campo-linha select, .campo-linha input[type="text"] {
+.campo-linha select,
+.campo-linha input[type="text"] {
     border: 1px solid #777;
     padding: 2px 4px;
     font-size: 0.9em;
     background-color: #fff;
 }
 
-/* Ajustes Específicos */
 .campo-linha select {
     flex-grow: 0;
 }
@@ -99,11 +97,10 @@ body {
 .label-privado {
     font-size: 0.9em;
     margin-left: 15px !important;
-    width: auto !important; /* Sobrescreve a largura fixa para caber ao lado do select */
+    width: auto !important;
     text-align: left !important;
 }
 
-/* Checkboxes da Coluna Direita */
 .grupo-checkboxes label {
     display: block;
     font-size: 0.9em;
@@ -114,9 +111,6 @@ body {
     margin-right: 5px;
 }
 
-/* ------------------------------------------------------------------- */
-/* SEÇÃO TEXTAREAS (Código) */
-/* ------------------------------------------------------------------- */
 .secao-textareas {
     display: flex;
     flex-direction: column;
@@ -140,12 +134,11 @@ body {
     box-sizing: border-box;
     border: 1px solid #777;
     padding: 5px;
-    resize: vertical; /* Permite redimensionamento vertical */
+    resize: vertical;
     font-family: monospace;
     font-size: 12px;
 }
 
-/* Ícone de Livro (usando CSS simples, pode ser substituído por um ícone real) */
 .icone-livro {
     position: absolute;
     right: 5px;
@@ -160,7 +153,6 @@ body {
     cursor: pointer;
 }
 
-/* Simula o ícone de livro (usando um caractere simples) */
 .icone-livro::before {
-    content: "\270D"; /* Símbolo de lápis/caneta (para simular a caneta no livro) */
+    content: "\270D";
 }
