@@ -11,6 +11,7 @@ const loremIpsumSettings = {
 		min: 2,
 		max: 4
 	},
+	commaChance: 0.15
 }
 
 function preencherSelectMarcas() {
@@ -71,15 +72,15 @@ function loremIpsunGenerator() {
 					word = word.charAt(0).toUpperCase() + word.slice(1);
 				} else if (k == wordsLength - 1) {
 					word += ".";
+				} else if(Math.random() < loremIpsumSettings.commaChance) {
+					word += ",";
 				}
 				wordList.push(word);
 			}
 			sentenceList.push(wordList.join(" "));
 		}
-		console.log("<p>" + sentenceList.join(" ") + "</p>");
 		paragraphList.push("<p class='about-us'>" + sentenceList.join(" ") + "</p>");
 	}
-	console.log(paragraphList);
 	return paragraphList.join("\n");
 }
 
@@ -96,6 +97,25 @@ function loadAboutUs() {
 	targetElement.innerHTML = loremText; 
 }
 
+function loadComponent(url, elementId) {
+    fetch(url)
+        .then(response => {
+            // Verifica se a requisição foi bem-sucedida
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Insere o conteúdo HTML no placeholder
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(e => {
+            console.error(`Erro ao carregar o componente ${url}:`, e);
+        });
+}
+
+document.addEventListener('DOMContentLoaded', loadComponent('pages/footer/footer.html', 'footer-placeholder'));
 document.addEventListener('DOMContentLoaded', preencherSelectMarcas);
 document.addEventListener('DOMContentLoaded', preencherSelectModels);
 document.addEventListener('DOMContentLoaded', loadAboutUs);
