@@ -98,7 +98,7 @@ function loadAboutUs() {
 }
 
 function loadComponent(url, elementId) {
-    fetch(url)
+    fetch(url, {mode:"no-cors", headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"}})
         .then(response => {
             // Verifica se a requisição foi bem-sucedida
             if (!response.ok) {
@@ -115,7 +115,8 @@ function loadComponent(url, elementId) {
         });
 }
 
-document.addEventListener('DOMContentLoaded', loadComponent('pages/footer/footer.html', 'footer-placeholder'));
+document.addEventListener('DOMContentLoaded', loadComponent('index.html', 'footer-placeholder'));
+// document.addEventListener('DOMContentLoaded', loadComponent('pages/footer/footer.html', 'footer-placeholder'));
 document.addEventListener('DOMContentLoaded', preencherSelectMarcas);
 document.addEventListener('DOMContentLoaded', preencherSelectModels);
 document.addEventListener('DOMContentLoaded', loadAboutUs);
