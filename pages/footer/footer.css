@@ -37,6 +37,12 @@
     gap: 20px;
 }
 
+.footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 40px 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
