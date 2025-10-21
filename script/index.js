@@ -98,7 +98,7 @@ function loadAboutUs() {
 }
 
 function loadComponent(url, elementId) {
-    fetch(url, {mode:"no-cors", headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"}})
+    fetch(url)
         .then(response => {
             // Verifica se a requisição foi bem-sucedida
             if (!response.ok) {
@@ -107,16 +107,15 @@ function loadComponent(url, elementId) {
             return response.text();
         })
         .then(data => {
-            // Insere o conteúdo HTML no placeholder
-            document.getElementById(elementId).innerHTML = data;
+			document.getElementsByTagName(elementId)[0].innerHTML = data;
         })
         .catch(e => {
             console.error(`Erro ao carregar o componente ${url}:`, e);
         });
 }
 
-document.addEventListener('DOMContentLoaded', loadComponent('index.html', 'footer-placeholder'));
-// document.addEventListener('DOMContentLoaded', loadComponent('pages/footer/footer.html', 'footer-placeholder'));
+document.addEventListener('DOMContentLoaded', loadComponent('/pages/footer/footer.html', 'footer-placeholder'));
+document.addEventListener('DOMContentLoaded', loadComponent('/pages/header/header.html', 'header-placeholder'));
 document.addEventListener('DOMContentLoaded', preencherSelectMarcas);
 document.addEventListener('DOMContentLoaded', preencherSelectModels);
 document.addEventListener('DOMContentLoaded', loadAboutUs);
