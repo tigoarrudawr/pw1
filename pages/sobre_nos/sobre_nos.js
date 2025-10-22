@@ -15,5 +15,5 @@ function loadComponent(url, elementId) {
         });
 }
 
-document.addEventListener('DOMContentLoaded', loadComponent('/pages/footer/footer.html', 'footer-placeholder'));
-document.addEventListener('DOMContentLoaded', loadComponent('/pages/header/header.html', 'header-placeholder'));
+document.addEventListener('DOMContentLoaded', loadComponent('/pw1/pages/footer/footer.html', 'footer-placeholder'));
+document.addEventListener('DOMContentLoaded', loadComponent('/pw1/pages/header/header.html', 'header-placeholder'));
