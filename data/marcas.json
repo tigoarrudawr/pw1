@@ -1,4 +1,4 @@
-const montadoras = [
+[
     {
         "value": "toyota",
         "text": "Toyota"
