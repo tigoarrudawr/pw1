@@ -56,34 +56,25 @@
                 <form id="contact-form" style="display: grid; gap: 20px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
-                            <label for="first-name"
-                                style="display: block; margin-bottom: 8px; font-weight: bold;">Nome</label>
-                            <input type="text" id="first-name" name="first-name" required
-                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                            <label for="first-name" class="form-lable">Nome</label>
+                            <input type="text" id="first-name" name="first-name" required class="form-input">
                         </div>
                         <div>
-                            <label for="last-name"
-                                style="display: block; margin-bottom: 8px; font-weight: bold;">Sobrenome</label>
-                            <input type="text" id="last-name" name="last-name" required
-                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                            <label for="last-name" class="form-lable">Sobrenome</label>
+                            <input type="text" id="last-name" name="last-name" required class="form-input">
                         </div>
                     </div>
                     <div>
-                        <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold;">E-mail</label>
-                        <input type="email" id="email" name="email" required
-                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                        <label for="email" class="form-lable">E-mail</label>
+                        <input type="email" id="email" name="email" required class="form-input">
                     </div>
                     <div>
-                        <label for="phone"
-                            style="display: block; margin-bottom: 8px; font-weight: bold;">Telefone</label>
-                        <input type="tel" id="phone" placeholder="(555) 123-4567" name="phone"
-                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                        <label for="phone" class="form-lable">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(555) 123-4567" name="phone" class="form-input">
                     </div>
                     <div>
-                        <label for="subject"
-                            style="display: block; margin-bottom: 8px; font-weight: bold;">Assunto</label>
-                        <select id="subject" name="subject" required
-                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                        <label for="subject" class="form-lable">Assunto</label>
+                        <select id="subject" name="subject" required class="form-input">
                             <option value="">Assunto</option>
                             <option value="sales">Vendas</option>
                             <option value="service">Serviços e manutenção</option>
@@ -92,8 +83,7 @@
                         </select>
                     </div>
                     <div>
-                        <label for="message"
-                            style="display: block; margin-bottom: 8px; font-weight: bold;">Mensagem</label>
+                        <label for="message" class="form-lable">Mensagem</label>
                         <textarea id="message" name="message" rows="5" required
                             style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; resize: vertical;"></textarea>
                     </div>
