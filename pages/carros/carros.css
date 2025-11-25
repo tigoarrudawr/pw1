@@ -283,6 +283,29 @@ h3 {
     padding-left: 15px;
 }
 
-.btn-clean {
-    text-decoration: none;
+.specs-list {
+    list-style: none; /* Remove os marcadores de bullet */
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.specs-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    display: flex; /* Para alinhar o título e o valor */
+    justify-content: space-between;
+}
+
+.specs-list li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.specs-list li strong {
+    color: #555;
+    font-weight: 600;
 }
